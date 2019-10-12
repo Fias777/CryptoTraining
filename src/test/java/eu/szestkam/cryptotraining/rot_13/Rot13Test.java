@@ -1,6 +1,5 @@
 package eu.szestkam.cryptotraining.rot_13;
 
-import eu.szestkam.cryptotraining.cesar.CesarCipher;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -54,7 +53,7 @@ class Rot13Test {
     @Test
     public void testSimpleEncodeLowerCase() {
         Rot13 cipher13 = new Rot13("abc");
-        String code13 = "mno";
+        String code13 = "nop";
         String encoded13 = cipher13.encode13();
         assertEquals(code13, encoded13);
 
@@ -67,7 +66,7 @@ class Rot13Test {
     @Test
     public void testSimpleEncodeMixedCase() {
         Rot13 cipher13 = new Rot13("abC");
-        String code13 = "mnO";
+        String code13 = "noP";
         String encoded13 = cipher13.encode13();
         assertEquals(code13, encoded13);
 
@@ -87,7 +86,7 @@ class Rot13Test {
     }
     @Test
     public void testSimpleDecodeMixedCase() {
-        Rot13 cipher13 = new Rot13("mnO");
+        Rot13 cipher13 = new Rot13("noP");
         String code13 = "abC";
         String encoded13 = cipher13.decrypt13();
         assertEquals(code13, encoded13);
