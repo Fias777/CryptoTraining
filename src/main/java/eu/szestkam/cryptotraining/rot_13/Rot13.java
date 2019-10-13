@@ -1,6 +1,7 @@
 package eu.szestkam.cryptotraining.rot_13;
 
 public class Rot13 {
+
     private final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     private String phrase;
@@ -59,5 +60,6 @@ public class Rot13 {
 
     private int charIndexOf(Character _char) {
         return ALPHABET.indexOf(_char);
+
     }
 }

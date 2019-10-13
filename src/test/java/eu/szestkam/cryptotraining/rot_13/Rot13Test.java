@@ -1,5 +1,4 @@
 package eu.szestkam.cryptotraining.rot_13;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -102,5 +101,6 @@ class Rot13Test {
         code13 = "XYz";
         encoded13 = cipher13.decrypt13();
         assertEquals(code13, encoded13);
+
     }
 }
