@@ -18,20 +18,21 @@ class Rot13Test {
         cipher13Phrase = new Rot13(SAMPLE_PHRASE);
     }
 
-    @DisplayName("Correct cipher instance with no args")
+    @DisplayName("Correct cipher13 instance with no args")
     @Test
     public void testIfCesarExist() {
         Rot13 cipher13 = cipher13NoArg;
         assertNotNull(cipher13);
     }
 
-    @DisplayName("Correct cipher instance with phrase")
+    @DisplayName("Correct cipher13 instance with phrase")
     @Test
     public void testPassStringToConstructor() {
         Rot13 cipher13 = cipher13Phrase;
         assertNotNull(cipher13);
     }
 
+    @DisplayName("Correct cipher13 empty string")
     @Test
     public void testEncrypWhenNoTextThenEmptyString() {
         Rot13 cipher13 = cipher13NoArg;
@@ -41,6 +42,7 @@ class Rot13Test {
         assertEquals("", encoded13);
     }
 
+    @DisplayName("Correct cipher13 the same lenght of string")
     @Test
     public void testEncrypWhenTextThenSameLenghtOfString() {
         Rot13 cipher13 = cipher13Phrase;
@@ -50,6 +52,7 @@ class Rot13Test {
         assertEquals(SAMPLE_PHRASE.length(), encoded13.length());
     }
 
+    @DisplayName("Correct cipher13 lower case")
     @Test
     public void testSimpleEncodeLowerCase() {
         Rot13 cipher13 = new Rot13("abc");
@@ -63,6 +66,7 @@ class Rot13Test {
         assertEquals(code13, encoded13);
     }
 
+    @DisplayName("Correct cipher13 encode mixed case")
     @Test
     public void testSimpleEncodeMixedCase() {
         Rot13 cipher13 = new Rot13("abC");
@@ -76,6 +80,7 @@ class Rot13Test {
         assertEquals(code13, encoded13);
     }
 
+    @DisplayName("Correct cipher13 return empty string")
     @Test
     public void testDecrypWhenNoTextThenEmptyString() {
         Rot13 cipher13 = cipher13NoArg;
@@ -84,6 +89,8 @@ class Rot13Test {
         assertNotNull(decoded13);
         assertEquals("", decoded13);
     }
+
+    @DisplayName("Correct cipher13 decode mixed case")
     @Test
     public void testSimpleDecodeMixedCase() {
         Rot13 cipher13 = new Rot13("noP");
@@ -95,8 +102,5 @@ class Rot13Test {
         code13 = "XYz";
         encoded13 = cipher13.decrypt13();
         assertEquals(code13, encoded13);
-
     }
-
-
 }
