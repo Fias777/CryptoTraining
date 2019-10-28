@@ -6,11 +6,11 @@ public class CesarCipher {
 
     private String phrase;
 
-    CesarCipher(String text) {
+    public CesarCipher(String text) {
         this.phrase = text;
     }
 
-    CesarCipher() {
+    public CesarCipher() {
         phrase = "";
     }
 

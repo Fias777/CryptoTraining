@@ -19,7 +19,7 @@ class Rot13Test {
 
     @DisplayName("Correct cipher instance with no args")
     @Test
-    public void testIfCesarExist() {
+    public void testIfRot13Exist() {
         Rot13 cipher = cipherNoArg;
         assertNotNull(cipher);
     }
